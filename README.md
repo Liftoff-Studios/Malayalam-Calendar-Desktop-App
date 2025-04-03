@@ -1,7 +1,2 @@
-# Tauri + Vanilla
-
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+# കൊല്ലവൎഷപ്രയോഗം
+ൟ പ്രയോഗത്തിലൂടെ താങ്ങൾക്കു് ഉപരിഫലകത്തിലും കൊല്ലവൎഷ പഞ്ചാംഗം കാണാം. താങ്ങൾക്കു് തല്ക്കാലം വെറും ഇന്നതെ മാസം മാത്രം കാണാൻ പറ്റും എന്നാൽ അടുത്ത പതിപ്പിൽ താങ്ങൾക്കു് ഏതുമാസം വെണമെങ്കിലും ഇടാനൊക്കും. 
