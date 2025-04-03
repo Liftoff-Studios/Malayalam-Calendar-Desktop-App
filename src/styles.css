@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Anjalioldlipi';
+    src: url('anjalioldlipi.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+
+:root {
+  font-family: Anjalioldlipi,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0e0e;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+
+.container{
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  box-sizing: border-box;
+}
+
+.title{
+  display:flex;
+  flex-direction: column;
+  max-width:450px;
+  align-items:center;
+  padding:15px;
+}
+
+
+.calendar-box{
+  width:700px;
+  height:500px;
+  border:0px black solid;
+  border-radius:10px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 10fr;
+  grid-template-areas:"mn mn mn mn mn mn mn" "dns dns dns dns dns dns dns" "da da da da da da da";
+  cursor:pointer;
+  box-shadow:0px 0px 15px 3px rgb(167, 167, 167);
+}
+
+#month-name{
+  grid-area:mn;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom:0px black solid;
+  border-radius:10px 10px 0px 0px;
+  font-size:1.3em;
+  background-color: rgb(222, 89, 6);
+  color:white;
+}
+
+#day-names{
+  display:grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-area:dns;
+}
+
+#day-names div{
+  display:flex;
+  border-right:1px black solid;
+  border-bottom:1px black solid;
+  justify-content: center;
+  align-items:center;
+  font-size:1.1em;
+}
+
+#days{
+  grid-area:da;
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  
+}
+
+#days>span{
+  
+  display:grid;
+  grid-template-rows: 80% 20%;
+  border-right:1px black solid;
+  border-bottom:1px black solid;
+}
+
+
+.date-no{
+  font-weight:800;
+  font-size:2em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-star{
+  font-size:0.8em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:3px;
+  box-sizing: border-box;
+}
+
+.last-row{
+  border-bottom:none !important;
+}
+
+.last-column{
+  border-right:none !important;
+}
+
+.highlighted{
+  background-color: yellow;
+}

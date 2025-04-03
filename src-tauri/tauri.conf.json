@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "kollavarshaprayogam",
+  "version": "0.1.0",
+  "identifier": "com.kollavarshaprayogam.app",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "കൊല്ലവൎഷപ്രയോഗം",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.svg",
+      "icons/icon.ico",
+      "icons/128x128.png"
+    ]
+  }
+}
