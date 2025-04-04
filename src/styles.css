@@ -1,11 +1,16 @@
 @font-face {
     font-family: 'Anjalioldlipi';
     src: url('anjalioldlipi.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+}
+
+@font-face {
+  font-family: 'Manjariregular';
+  src: url('assets/Manjari-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
 
 
 :root {
-  font-family: Anjalioldlipi,sans-serif;
+  font-family: Manjariregular,sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;

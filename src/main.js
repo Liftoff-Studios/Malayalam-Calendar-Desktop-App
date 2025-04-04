@@ -99,13 +99,54 @@ let loadDateNumbers = ()=>{
 let EnToMlNumber = (no)=>{
   let digits = ["൧","൨","൩","൪","൫","൬","൭","൮","൯","൦"];
   let enDigits = ["1","2","3","4","5","6","7","8","9","0"];
+
+  var th = Math.floor((no % 10000) / 1000).toString(),
+            h = Math.floor((no % 1000) / 100).toString(),
+            t = Math.floor((no  % 100) / 10).toString(),
+            u = Math.floor(no % 10).toString();
+
+  if(th=="0"){
+    th="";
+  }else if(th=="1"){
+    th="൲";
+  }else{
+    th=digits[enDigits.indexOf(th)]+"൲"
+  }
+
+  if(h=="0"){
+    h="";
+  }else if(h=="1"){
+    h="൱";
+  }else{
+    h=digits[enDigits.indexOf(h)]+"൱"
+  }
+
+  if(t=="0"){
+    t="";
+  }else if(t=="1"){
+    t="൰";
+  }else{
+    t=digits[enDigits.indexOf(t)]+"൰"
+  }
+
+  if(u=="0"){
+    u="";
+  }else{
+    u=digits[enDigits.indexOf(u)]
+  }
+
+
+  return th+h+t+u;
+  
+  /*
+  
   let d = no.toString().split("");
   let newNo = "";
   for(let i =0; i<no.toString().length;i++){
     newNo += digits[enDigits.indexOf(d[i])];
   }
 
-  return newNo;
+  return newNo;*/
 }
 setCurrentMonth()
 loadDateNumbers()
