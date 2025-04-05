@@ -68,7 +68,16 @@ let loadDateNumbers = ()=>{
   for(let i = 0; i<42; i++){
     if(dateNumbers[i][0]!==0){
       document.querySelector(`#r${row}-c${col} .date-no`).innerHTML = EnToMlNumber(dateNumbers[i][0]);
-      document.querySelector(`#r${row}-c${col} .date-star`).innerHTML = dateNumbers[i][1];
+
+      if(dateNumbers[i][2]==0){
+        document.querySelector(`#r${row}-c${col} .date-star`).innerHTML = dateNumbers[i][1]+" 🌑";
+      }else if(dateNumbers[i][2]==15){
+        document.querySelector(`#r${row}-c${col} .date-star`).innerHTML = dateNumbers[i][1]+" 🌕";
+      }else{
+        document.querySelector(`#r${row}-c${col} .date-star`).innerHTML = dateNumbers[i][1];
+      }
+
+      
     }else{
       document.querySelector(`#r${row}-c${col} .date-no`).innerHTML = "";
       document.querySelector(`#r${row}-c${col} .date-star`).innerHTML = "";
