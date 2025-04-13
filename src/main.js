@@ -11,7 +11,7 @@ let options = {
 };
 
 //മാസങ്ങൾ
-let months = ["ചിങ്ങം", "കന്നി", "തുലാം", "വൃശ്ചികം", "ധനു", "മകരം", "കുംഭം", "മീനം", "മേടം", "എടവം", "മിഥുനം", "കർക്കടം"];
+let months = ["","ചിങ്ങം", "കന്നി", "തുലാം", "വൃശ്ചികം", "ധനു", "മകരം", "കുംഭം", "മീനം", "മേടം", "എടവം", "മിഥുനം", "കർക്കടം"];
 let dayNames = ["ഞായർ", "തിങ്കൾ", "ചൊവ്വ", "ബുധൻ", "വ്യാഴം", "വെള്ളി", "ശനി"]
 let calendar = new Kollavarsham(options);
 
@@ -36,6 +36,7 @@ let setCurrentMonth = ()=>{
   let tod = calendar.fromGregorianDate(todGreg);
   todGreg.setHours(0)
   let m = tod.month;
+  console.log(m)
   todGreg.setDate(todGreg.getDate()-tod.date+1);
   for(let i = 0; i<dayNames.indexOf((calendar.fromGregorianDate(todGreg)).mlWeekdayName);i++){
     dateNumbers.push([0,"","",""])
